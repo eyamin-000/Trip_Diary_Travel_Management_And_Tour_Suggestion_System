@@ -15,94 +15,110 @@ $my_plans = getUserPlannedTrips($user_id);
 <head>
     <title>Plan Your Trip - Trip Diary</title>
     <link rel="stylesheet" href="../style.css">
-    <style>
+   <style>
         body
         {
-            margin: 0;
-            font-family: Arial;
-            background: #f4f4f4; }
-        .top-black
-        {
-            width: 100%;
-            height: 100px;
+            margin: 0; 
+            font-family: Arial, sans-serif; 
             background: #000;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative; }
-
-        .back-btn {
-            position: absolute; 
-            left: 20px; 
-            top: 35px; 
-            background: #fff; 
-            color: #000; 
-            border: none; 
-            padding: 5px 15px; 
-            cursor: pointer; 
-            font-weight: bold; }
-        
-        .main-container 
-        { display: flex; 
-        padding: 30px; 
-        gap: 20px; }
-        .box 
+        }
+        .white-section 
         { 
+            height: 30vh;
+            width: 100%; 
             background: #fff; 
-            padding: 20px; 
-            border-radius: 8px; 
-         }
-        
-        .left-box
+            position: relative; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .back-btn
         {
-             flex: 1; 
-    }
-        .left-box input, .left-box select, .left-box textarea 
+            position: absolute; 
+            top: 20px; 
+            left: 20px; 
+            padding: 10px 20px; 
+            cursor: pointer; 
+            background: #333; 
+            color: white; 
+            border: none; 
+            font-weight: bold; 
+        }
+        .header-title
         { 
-            width: 100%; 
-            padding: 10px; 
-            margin-bottom: 10px; 
-            border: 1px solid #ccc; 
-            border-radius: 4px; 
-            box-sizing: border-box; }
-        .save-btn 
+            font-size: 35px; 
+            font-weight: bold; 
+            color: #000; 
+        }
+        .black-section
         { 
-            width: 100%; 
-            padding: 10px; 
+            min-height: 70vh; 
             background: #000; 
             color: #fff; 
-            border: none; 
-            cursor: pointer; 
-            font-size: 16px; 
+            display: flex; 
+            padding: 20px; 
+            box-sizing: border-box; }
+        .form-area 
+        { 
+            flex: 0.8; 
+            padding: 0 20px; 
+            border-right: 1px solid #444; 
         }
 
-        .right-box 
+        .form-area input, .form-area textarea
+        { width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #555; 
+        background: #1a1a1a; 
+        color: #fff; 
+        box-sizing: border-box; 
+    }
+        .add-btn
+        {
+            width: 100%; 
+            background: #fff; 
+            color: #000; 
+            padding: 12px; 
+            border: none; 
+            font-weight: bold; 
+            cursor: pointer; 
+            font-size: 16px; }
+        .table-area
         { 
-            flex: 1; 
-            max-height: 500px; 
-            overflow-y: auto; }
-        .trip-item 
-        { border: 1px solid #ddd; 
-        margin-bottom: 10px; 
-        border-radius: 5px; 
-        overflow: hidden; }
-        .trip-title-bar 
-        { background: #eee; 
-        padding: 15px; 
-        cursor: pointer; 
-        font-weight: bold; 
-        display: flex; 
-        justify-content: space-between; }
-        .trip-details 
-        { padding: 15px; 
-        background: #fafafa; 
-        display: none; 
-        border-top: 1px solid #ddd; }
-        .trip-details p 
-        { margin: 5px 0; 
-        font-size: 14px; 
-        color: #555; }
+            flex: 1.5; 
+            padding: 0 20px;
+         }
+        .scroll-box 
+        { 
+            height: 400px; 
+            overflow-y: auto; 
+            background: #111; 
+            border: 1px solid #333; }
+        table 
+        { 
+            width: 100%; 
+            border-collapse: collapse; 
+            color: #fff; 
+            font-size: 12px; }
+        th, td 
+        { 
+            border: 1px solid #333; 
+            padding: 10px; 
+            text-align: left; }
+        th 
+        { 
+            background: #222; 
+            position: sticky; 
+            top: 0; }
+        .del-btn 
+        { 
+            background: #ff4d4d; 
+            color: white; 
+            border: none; 
+            padding: 5px 8px; 
+            cursor: pointer; 
+            border-radius: 3px; }
     </style>
 </head>
 <body>
