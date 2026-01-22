@@ -10,22 +10,93 @@ $past_trips = getUserPastTrips($_SESSION['user']['id']);
     <title>Past Trips - Trip Diary</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-        body { margin: 0; font-family: Arial; background: #f4f4f4; }
-        .top-black { height: 100px; background: #000; color: #fff; display: flex; align-items: center; justify-content: center; position: relative; }
-        .back-btn { position: absolute; left: 20px; top: 35px; background: #fff; color: #000; border: none; padding: 5px 15px; cursor: pointer; font-weight: bold; }
-        
-        .main-container { display: flex; padding: 30px; gap: 20px; }
-        .box { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        
-        .left-box { flex: 1; }
-        .left-box input, .left-box select, .left-box textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        .save-btn { width: 100%; padding: 10px; background: #000; color: #fff; border: none; cursor: pointer; font-size: 16px; }
+        body
+        {
+            margin: 0;
+            font-family: Arial;
+            background: #f4f4f4; }
+        .top-black
+        {
+            width: 100%;
+            height: 100px;
+            background: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative; }
 
-        .right-box { flex: 1; max-height: 500px; overflow-y: auto; }
-        .trip-item { border: 1px solid #ddd; margin-bottom: 10px; border-radius: 5px; overflow: hidden; }
-        .trip-title-bar { background: #eee; padding: 15px; cursor: pointer; font-weight: bold; display: flex; justify-content: space-between; }
-        .trip-details { padding: 15px; background: #fafafa; display: none; border-top: 1px solid #ddd; }
-        .trip-details p { margin: 5px 0; font-size: 14px; color: #555; }
+        .back-btn {
+            position: absolute; 
+            left: 20px; 
+            top: 35px; 
+            background: #fff; 
+            color: #000; 
+            border: none; 
+            padding: 5px 15px; 
+            cursor: pointer; 
+            font-weight: bold; }
+        
+        .main-container 
+        { display: flex; 
+        padding: 30px; 
+        gap: 20px; }
+        .box 
+        { 
+            background: #fff; 
+            padding: 20px; 
+            border-radius: 8px; 
+         }
+        
+        .left-box
+        {
+             flex: 1; 
+    }
+        .left-box input, .left-box select, .left-box textarea 
+        { 
+            width: 100%; 
+            padding: 10px; 
+            margin-bottom: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            box-sizing: border-box; }
+        .save-btn 
+        { 
+            width: 100%; 
+            padding: 10px; 
+            background: #000; 
+            color: #fff; 
+            border: none; 
+            cursor: pointer; 
+            font-size: 16px; 
+        }
+
+        .right-box 
+        { 
+            flex: 1; 
+            max-height: 500px; 
+            overflow-y: auto; }
+        .trip-item 
+        { border: 1px solid #ddd; 
+        margin-bottom: 10px; 
+        border-radius: 5px; 
+        overflow: hidden; }
+        .trip-title-bar 
+        { background: #eee; 
+        padding: 15px; 
+        cursor: pointer; 
+        font-weight: bold; 
+        display: flex; 
+        justify-content: space-between; }
+        .trip-details 
+        { padding: 15px; 
+        background: #fafafa; 
+        display: none; 
+        border-top: 1px solid #ddd; }
+        .trip-details p 
+        { margin: 5px 0; 
+        font-size: 14px; 
+        color: #555; }
     </style>
 </head>
 <body>
