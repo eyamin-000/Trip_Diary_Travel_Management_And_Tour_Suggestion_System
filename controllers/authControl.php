@@ -53,7 +53,7 @@ if($res['role'] === 'admin') {
     echo json_encode(['status' => 'success', 'role' => 'admin']); 
 }
 
-//eta Important... Bar Bar Login chara access paoar jonno. eta pore thik korbo
+//Important. For Get Access without Repeatative login. need modify 
 
 /*if (isset($_POST['login'])) {
     $email = $_POST['email'];
