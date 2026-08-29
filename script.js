@@ -245,7 +245,7 @@ function enrollNow(eventId) {
     xhr.send("action=enroll&event_id=" + eventId);
 }
 
-// ১১. Admin User Delete Function
+// 11. Admin User Delete Function
 function handleUserDelete(id) {
     if(!confirm("Are you sure you want to delete this user?")) return;
 
