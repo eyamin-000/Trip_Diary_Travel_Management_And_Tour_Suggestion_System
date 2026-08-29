@@ -11,7 +11,7 @@ if (!$conn) {
     die("DB Connection Failed");
 }
 
-//eta Important... Bar Bar Login chara access paoar jonno. eta pore thik korbo
+//Important. For get access without Repeatative loggin. Need Modification
 
 /*if (session_status() == PHP_SESSION_NONE) {
     session_start();
