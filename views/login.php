@@ -115,7 +115,7 @@
 
         <input type="text" id="username" placeholder="Username"><br><br>
         <input type="password" id="password" placeholder="Password"><br><br>
-        <!--Eta Pore Thik Korbo-->
+        <!--Need Modification-->
         <input type="checkbox" name="remember"> Remember Me <br><br>
 
         <button onclick="loginProcess()">Login</button>
@@ -140,7 +140,6 @@
 
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                // JSON ডেটা পার্স করা
                 var res = JSON.parse(this.responseText);
                 
                 
@@ -155,7 +154,6 @@
                 }
             }
         };
-        // AJAX এর মাধ্যমে ডেটা পাঠানো
         xhr.send("action=login&username=" + user + "&password=" + pass + "&role=" + role);
     }
     </script>
